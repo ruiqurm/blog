@@ -1,0 +1,21 @@
+#+hugo_base_dir: ../
+
+* DONE 修复spacemacs org-mode插件bug                        :tag1:@emacs:
+CLOSED: <2024-08-28 周三 12:17>
+:PROPERTIES:
+:EXPORT_FILE_NAME: pin_org_roam_version
+:END:
+
+org-mode的体验没有想象中的那么好,在体验org-roam的过程中，先是遇到了db-sync的问题，然后又
+发现自己的自动补全有问题，completion-at-point不会补全；换了一套spacemacs的配置后，这才跑
+起来，但是链接又出问题了。一搜，才发现去年就有人反应问题了。
+1. 对于zoom用户，可以直接用这里的方法[[https://github.com/org-roam/org-roam/issues/2361#issuecomment-1632943836][doom中pin住org版本的方法]]。
+2. spacemacs用户,我在issue里面找到一个回答[[https://github.com/syl20bnr/spacemacs/issues/16520][pin a specific package version]]
+
+* 方法
+首先到=layers/+emacs/org/packages.el=下面，修改版本号为=(org :location elpa :version "9.6.7")=
+然后在emacs里面，调用package-delete，把所有依赖于org的全删掉，org自己也删掉。重新启动就行了。
+
+
+配置了半天，突然对[[https://emacs-china.org/t/space-emacs-doom-emacs/25269/22][纠结半天, 从space emacs换成doom emacs, 整个世界清净了…]] 这个帖子有了同感.
+
