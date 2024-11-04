@@ -1,0 +1,27 @@
+baseURL : 'https://example.org/'
+languageCode : 'en-us'
+title : 'Ruiqurm blog'
+theme : 'hugo-ivy'
+
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "About"
+      url: "/about/"
+      weight: 2
+    - name: "Categories"
+      url: "/categories/"
+      weight: 3
+    - name: "Tags"
+      url: "/tags/"
+      weight: 4
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
